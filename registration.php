@@ -130,7 +130,8 @@ font-size: 20px;
 
 
     <div class="container">
-
+   
+    <form action ="./postregister.php"method="post">
       <h2>Internship Registration Form</h2>
 
 
@@ -171,6 +172,7 @@ font-size: 20px;
   <input type="file" id="image" name="image" accept="image/*" required><br><br>
   
   <input type="submit" value="Submit">
+</form>
     </div>
 
 
