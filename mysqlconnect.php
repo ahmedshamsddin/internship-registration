@@ -34,7 +34,7 @@ $conn->close();*/
 
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:internship-registration.database.windows.net,1433; Database = internship-registration", "CloudSA2f41fa49", "Xara9332!");
+    $conn = new PDO("sqlsrv:server = tcp:internship-registration.database.windows.net,1433; Database = internship-registration", "CloudSA2f41fa49", "Xara9322!");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
