@@ -8,7 +8,8 @@ body, h1, h2, h3, p, table, th, td {
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0; /* 0 is for horizontal margin, this code is equal to margin-top 20px */
+    margin-top: -10px; /* 0 is for horizontal margin, this code is equal to margin-top 20px */
+    margin-left: 5px;
     font-size: 0.9em;
   }
   
@@ -37,17 +38,26 @@ body, h1, h2, h3, p, table, th, td {
     padding: 5px 10px;
     margin-right: 5px;
     cursor: pointer;
+    width: 70px;
   }
   
   .accept-button {
-    background-color: #4CAF50;
+    background-color: #4caf4f;
     color: white;
     border: none;
+    transition: background-color 0.3s ease;
   }
   
   .reject-button {
     background-color: #f44336;
     color: white;
     border: none;
+    transition: background-color 0.3s ease;
+  }
+  .accept-button:hover{
+    background-color: #4caf4f96;
+  }
+  .reject-button:hover{
+    background-color: lightcoral;
   }
   
