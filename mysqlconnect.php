@@ -32,6 +32,7 @@ echo "Connected successfully";
 // Close the connection
 $conn->close();*/
 
+// PHP Data Objects(PDO) Sample Code:
 try {
     $conn = new PDO("sqlsrv:server = tcp:internship-registration.database.windows.net,1433; Database = internship-registration", "CloudSA2f41fa49", "Xara9332!");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -45,6 +46,5 @@ catch (PDOException $e) {
 $connectionInfo = array("UID" => "CloudSA2f41fa49", "pwd" => "Xara9332!", "Database" => "internship-registration", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:internship-registration.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-echo "ok"
 
 ?>
