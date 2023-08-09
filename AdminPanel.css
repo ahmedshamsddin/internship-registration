@@ -1,0 +1,53 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, table, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0; /* 0 is for horizontal margin, this code is equal to margin-top 20px */
+    font-size: 0.9em;
+  }
+  
+  /* Style table header */
+  th {  
+    background-color: #f2f2f2;
+    text-align: left; /*Reason: Most browsers ~including chrome~ lock to center the table head columns*/
+    padding: 12px 15px;
+    font-weight: bold; /*Reason: Ensures table head columns to be bold on all browsers */
+  }
+   
+  /* Style table cells */
+  td {
+    border: 1px solid #dddddd;
+    padding: 12px 15px;
+  }
+  
+  /* Style user name links */
+  td a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Style buttons */
+  .accept-button, .reject-button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .accept-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  .reject-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+  }
+  
