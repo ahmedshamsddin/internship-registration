@@ -1,3 +1,32 @@
+<?php 
+
+if (isset($_POST['full_name'])) {
+  $full_name = $_POST['full_name'];
+  $email = $_POST['email'];
+  $phone_number = $_POST['phone_number'];
+  $university = $_POST['university'];
+  $major = $_POST['major'];
+  $expected_graduation_date = $_POST['expected_graduation_date'];
+  $internship_type = $_POST['internship_type'];
+  $registration_date = $_POST['registration_date'];
+  $image = $_POST['image'];
+
+  require "mysqlconnect.php";
+  $stmt = "INSERT INTO applications (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image) VALUES ('$id', '$full_name', '$email', '$phone_number', '$university', '$major', '$expected_graduation_date', '$internship_type', '$status', '$registration_date', '$image')";
+  if (!$stmt) {
+    die("Statement preparation failed: " . print_r(sqlsrv_errors(), true));
+}
+
+if (sqlsrv_execute($stmt) === false) {
+    die("Statement execution failed: " . print_r(sqlsrv_errors(), true));
+}
+
+echo "Record inserted successfully.";
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -133,10 +162,6 @@ font-size: 20px;
    
     <form action ="./postregister.php"method="post">
       <h2>Internship Registration Form</h2>
-
-
-  <label for="id">ID:</label><br>
-  <input type="text" id="id" name="id" required><br><br>
   
   <label for="full_name">Full Name:</label><br>
   <input type="text" id="full_name" name="full_name" required><br><br>
@@ -161,9 +186,6 @@ font-size: 20px;
     <option value="part_time">Part-Time</option>
     <option value="full_time">Full-Time</option>
   </select><br><br>
-  
-  <label for="status">Status:</label><br>
-  <input type="text" id="status" name="status" required><br><br>
   
   <label for="registration_date">Registration Date:</label><br>
   <input type="date" id="registration_date" name="registration_date" required><br><br>
