@@ -42,14 +42,14 @@ td a {
 }
 
 .accept-button {
-  background-color: #4caf4f;
+  background-color: #4caf4ff3;
   color: white;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .reject-button {
-  background-color: #f44336;
+  background-color: #f44336f7;
   color: white;
   border: none;
   transition: background-color 0.3s ease;
