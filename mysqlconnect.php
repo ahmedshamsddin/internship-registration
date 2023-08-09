@@ -10,7 +10,7 @@ if(!$connect)
 
   while($row =mysqli_fetch_array($stmt,MYSQLI_ASSOC)){
     echo $row['intern_1'];
-  }*/
+  }
 
 
 
@@ -30,7 +30,21 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 // Close the connection
-$conn->close();
+$conn->close();*/
 
+try {
+    $conn = new PDO("sqlsrv:server = tcp:internship-registration.database.windows.net,1433; Database = internship-registration", "CloudSA2f41fa49", "Xara9332!");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "CloudSA2f41fa49", "pwd" => "Xara9332!", "Database" => "internship-registration", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:internship-registration.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+echo "ok"
 
 ?>
