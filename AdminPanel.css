@@ -11,6 +11,7 @@ table {
   margin-top: -10px; /* 0 is for horizontal margin, this code is equal to margin-top 20px */
   margin-left: 5px;
   font-size: 0.9em;
+  
 }
 
 /* Style table header */
@@ -19,12 +20,14 @@ th {
   text-align: left; /*Reason: Most browsers ~including chrome~ lock to center the table head columns*/
   padding: 12px 15px;
   font-weight: bold; /*Reason: Ensures table head columns to be bold on all browsers */
+  
 }
  
 /* Style table cells */
 td {
   border: 1px solid #dddddd;
   padding: 12px 15px;
+ 
 }
 
 /* Style user name links */
@@ -38,7 +41,8 @@ td a {
   padding: 5px 10px;
   margin-right: 5px;
   cursor: pointer;
-  width: 70px;
+  width: 85px;
+  border-radius: 4px;
 }
 
 .accept-button {
