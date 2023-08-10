@@ -23,7 +23,7 @@ $params = array(
     $major,
     $expected_graduation_date,
     $internship_type,
-    "Pending",
+    "pending",
     $registration_date,
     "profile.jpg"
 );
