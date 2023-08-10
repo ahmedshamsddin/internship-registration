@@ -47,5 +47,10 @@ $connectionInfo = array("UID" => "CloudSA2f41fa49", "pwd" => "Xara9332!", "Datab
 $serverName = "tcp:internship-registration.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-echo "Connected successfully."
+echo "Connected successfully.";
+$stmt = "SELECT * FROM applications";
+
+$getResults= sqlsrv_query($conn, $stmt);
+
+echo $getResults;
 ?>
