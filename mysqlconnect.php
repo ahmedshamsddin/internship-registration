@@ -48,31 +48,4 @@ $serverName = "tcp:internship-registration.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 echo "Connected successfully.";
-$sql = "INSERT INTO applications (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-$params = array(
-    "John Doe",
-    "john@example.com",
-    "123-456-7890",
-    "ABC University",
-    "Computer Science",
-    "2023-12-31",
-    "compulsory",
-    "pending",
-    date("Y-m-d H:i:s"), // Current date and time
-    "profile.jpg"
-);
-
-$stmt = sqlsrv_prepare($conn, $sql, $params);
-
-if (!$stmt) {
-    die("Statement preparation failed: " . print_r(sqlsrv_errors(), true));
-}
-
-if (sqlsrv_execute($stmt) === false) {
-    die("Statement execution failed: " . print_r(sqlsrv_errors(), true));
-}
-
-echo "Record inserted successfully.";
 ?>
