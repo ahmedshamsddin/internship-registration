@@ -51,6 +51,7 @@ echo "Connected successfully.";
 $stmt = "SELECT * FROM applications";
 
 $getResults= sqlsrv_query($conn, $stmt);
-
-echo $getResults;
+while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+  echo ($row['full_name'] . " " . $row['email'] . PHP_EOL);
+ }
 ?>
