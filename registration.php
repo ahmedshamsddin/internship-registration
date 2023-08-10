@@ -200,8 +200,8 @@ font-size: 20px;
   
   <label for="internship_type">Internship Type:</label><br>
   <select id="internship_type" name="internship_type" required>
-    <option value="part_time">Part-Time</option>
-    <option value="full_time">Full-Time</option>
+    <option value="optional">Part-Time</option>
+    <option value="compulsary">Full-Time</option>
   </select><br><br>
   
   <label for="registration_date">Registration Date:</label><br>
