@@ -12,8 +12,25 @@ if (isset($_POST['full_name'])) {
   //$image = $_POST['image'];
 
   require "mysqlconnect.php";
-  $stmt = "INSERT INTO applications (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image) VALUES ('$id', '$full_name', '$email', '$phone_number', '$university', '$major', '$expected_graduation_date', '$internship_type', '$status', '$registration_date')";
-  if (!$stmt) {
+  $sql = "INSERT INTO applications (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+$params = array(
+    $full_name,
+    $email,
+    $phone_number,
+    $university,
+    $major,
+    $expected_graduation_date,
+    $internship_type,
+    "Pending",
+    $registration_date,
+    "profile.jpg"
+);
+
+$stmt = sqlsrv_prepare($conn, $sql, $params);
+
+if (!$stmt) {
     die("Statement preparation failed: " . print_r(sqlsrv_errors(), true));
 }
 
