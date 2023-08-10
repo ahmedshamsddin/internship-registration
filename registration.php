@@ -37,84 +37,6 @@ echo "Record inserted successfully.";
 
     <link rel="stylesheet" href="style.css">
     <style>
-
-.container{
- 
-  max-width: 700px;
-  
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.209);
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #efefef25;
-  
- 
-  
-}
-.h22{
-  text-align: center;
-  color: black;
-  padding-bottom: 30px;
- 
-
-}
-form label{
-  font-weight: bold;
-  display: block;
-
-}
-
-input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-           
-        }
-        select{
-      
-          height: 40px;
-        }
-        input[type="file"]{
-          display: block;
-          margin-top: 10px;
-          
-        }
-        input[type="submit"]{
-          
-          background-color: hsl(191, 43%, 42%);
-          border: none;
-          color: white;
-          border-radius: 5px;
-          cursor: pointer;
-          padding-top: 10px;
-          padding-bottom: 10px;
-         padding-left: 290px;
-         padding-right:320px ;
-        
-        
-          
-          text-align: center;
-          
-          
-          
-        
-          
-          transition: 0.3s;
-        }
-         
-        input[type="submit"]:hover {
-            background-color: #4aa5de;
-        }
-
-
-
-        
         h1 {
 
 color : #4C0372;
@@ -142,8 +64,7 @@ font-size: 30px;
 color : white;
 font-family:Arial, Helvetica, sans-serif;
 font-size: 20px;
-text-align: center;
-margin-left: 20px;
+
 } 
 
 .d-flex {
@@ -191,7 +112,7 @@ font-size: 20px;
 
     <nav  class="navbar navbar-expand-lg " style="background-color: #ADC4CE ;">
       <div  class="container-fluid">
-        <h2  href="#">Internship </h2>
+        <h2 href="#">Internship </h2>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -273,7 +194,6 @@ font-size: 20px;
   <input type="file" id="image" name="image" accept="image/*" required><br><br>
   
   <input type="submit" value="Submit">
-</table>
 </form>
     </div>
 
