@@ -10,7 +10,7 @@ if (isset($_POST['full_name'])) {
   $internship_type = $_POST['internship_type'];
   $registration_date = $_POST['registration_date'];
   //$image = $_POST['image'];
-
+  echo $internship_type;
   require "mysqlconnect.php";
   $sql = "INSERT INTO applications (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
