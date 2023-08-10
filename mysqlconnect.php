@@ -48,7 +48,7 @@ $serverName = "tcp:internship-registration.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 echo "Connected successfully.";
-$sql = "INSERT INTO registrations (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image)
+$sql = "INSERT INTO applications (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $params = array(
