@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if (isset($_POST['full_name'])) {
   $full_name = $_POST['full_name'];
@@ -10,12 +10,12 @@ if (isset($_POST['full_name'])) {
   $internship_type = $_POST['internship_type'];
   $registration_date = $_POST['registration_date'];
   //$image = $_POST['image'];
- 
+
   require "mysqlconnect.php";
   $sql = "INSERT INTO applications (full_name, email, phone_number, university, major, expected_graduation_date, internship_type, status, registration_date, image)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-$params = array(
+  $params = array(
     $full_name,
     $email,
     $phone_number,
@@ -26,17 +26,17 @@ $params = array(
     "pending",
     $registration_date,
     "profile.jpg"
-);
+  );
 
-$stmt = sqlsrv_prepare($conn, $sql, $params);
+  $stmt = sqlsrv_prepare($conn, $sql, $params);
 
-if (!$stmt) {
+  if (!$stmt) {
     die("Statement preparation failed: " . print_r(sqlsrv_errors(), true));
-}
+  }
 
-if (sqlsrv_execute($stmt) === false) {
+  if (sqlsrv_execute($stmt) === false) {
     die("Statement execution failed: " . print_r(sqlsrv_errors(), true));
-}
+  }
 
 }
 
@@ -53,6 +53,83 @@ if (sqlsrv_execute($stmt) === false) {
 
     <link rel="stylesheet" href="style.css">
     <style>
+
+      
+.container{
+
+max-width: 700px;
+
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.209);
+border-radius: 10px;
+padding: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+background-color: #dbd9d971;
+
+
+
+}
+.h22{
+text-align: center;
+color: black;
+padding-bottom: 30px;
+
+
+}
+form label{
+font-weight: bold;
+display: block;
+
+}
+
+input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+
+      }
+      select{
+
+        height: 40px;
+      }
+      input[type="file"]{
+        display: block;
+        margin-top: 10px;
+
+      }
+      input[type="submit"]{
+
+        background-color: hsl(191, 43%, 42%);
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+       padding-left: 290px;
+       padding-right:320px ;
+
+
+
+        text-align: center;
+
+
+
+
+
+        transition: 0.3s;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #4aa5de;
+      }
+
+      
         h1 {
 
 color : #4C0372;
@@ -177,7 +254,8 @@ font-size: 20px;
     <div class="container">
    
     <form method="post">
-      <h2>Internship Registration Form</h2>
+      <h2 class="h22">Internship Registration Form</h2>
+      <hr>
   
   <label for="full_name">Full Name:</label><br>
   <input type="text" id="full_name" name="full_name" required><br><br>
